@@ -90,7 +90,7 @@ export default function ChatWindow() {
             className={`flex ${msg.direction === 'outgoing' ? 'justify-end' : 'justify-start'}`}
           >
             <div
-              className={`max-w-[70%] p-3.5 rounded-2xl shadow-sm relative animate-in slide-in-from-bottom-2 duration-300 ${
+              className={`max-w-[70%] p-3.5 rounded-xl shadow-sm relative animate-in slide-in-from-bottom-2 duration-300 ${
                 msg.direction === 'outgoing'
                   ? 'bg-[#dcf8c6] text-gray-800 rounded-tr-none'
                   : 'bg-white text-gray-800 rounded-tl-none'
@@ -115,7 +115,7 @@ export default function ChatWindow() {
       {/* Input */}
       <div className="p-4 bg-white/80 backdrop-blur-md border-t relative z-10">
         <form onSubmit={handleSendMessage} className="max-w-4xl mx-auto flex items-center gap-3">
-          <div className="flex-1 bg-gray-100 rounded-[1.5rem] px-5 py-3 shadow-inner border border-gray-200">
+          <div className="flex-1 bg-gray-100 rounded-xl px-5 py-3 shadow-inner border border-gray-200">
             <input
               type="text"
               placeholder="Type a response..."

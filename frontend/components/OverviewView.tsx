@@ -36,9 +36,9 @@ export default function OverviewView() {
     {
       title: 'Total Messages',
       value: stats?.totalMessages || 0,
-      icon: <MessageSquare className="text-indigo-600" />,
-      bg: 'bg-indigo-50',
-      color: 'text-indigo-600'
+      icon: <MessageSquare className="text-emerald-600" />,
+      bg: 'bg-emerald-50',
+      color: 'text-emerald-600'
     },
     {
       title: 'Delivery Rate',
@@ -67,7 +67,7 @@ export default function OverviewView() {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {cards.map((card, i) => (
-            <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center justify-between">
+            <div key={i} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-500 mb-1">{card.title}</p>
                 <h3 className="text-2xl font-bold text-gray-900">{card.value}</h3>
@@ -81,7 +81,7 @@ export default function OverviewView() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Traffic Breakdown */}
-          <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+          <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
             <h3 className="text-lg font-bold text-gray-900 mb-6">Messaging Traffic</h3>
             <div className="space-y-6">
               <div className="flex items-center justify-between">
@@ -120,13 +120,13 @@ export default function OverviewView() {
               <div className="pt-4">
                 <div className="flex justify-between text-xs font-medium mb-2">
                   <span className="text-gray-500">Distribution</span>
-                  <span className="text-indigo-600">
+                  <span className="text-emerald-600">
                     {Math.round(((stats?.outgoingCount || 0) / (stats?.totalMessages || 1)) * 100)}% Outgoing
                   </span>
                 </div>
                 <div className="w-full h-2.5 bg-gray-100 rounded-full overflow-hidden flex">
                   <div 
-                    className="h-full bg-indigo-500" 
+                    className="h-full bg-emerald-500" 
                     style={{ width: `${((stats?.outgoingCount || 0) / (stats?.totalMessages || 1)) * 100}%` }}
                   ></div>
                   <div 
@@ -139,13 +139,13 @@ export default function OverviewView() {
           </div>
 
           {/* Tips Card */}
-          <div className="bg-gradient-to-br from-indigo-600 to-indigo-800 p-8 rounded-2xl shadow-xl text-white relative overflow-hidden">
+          <div className="bg-gradient-to-br from-emerald-600 to-emerald-800 p-8 rounded-xl shadow-xl text-white relative overflow-hidden">
             <div className="relative z-10 space-y-4">
               <h3 className="text-xl font-bold">Campaign Optimization</h3>
-              <p className="text-indigo-100 text-sm leading-relaxed">
+              <p className="text-emerald-100 text-sm leading-relaxed">
                 Your read rate is at {Math.round(stats?.readRate || 0)}%. Try using personalized templates and interactive buttons to increase engagement by up to 40%.
               </p>
-              <button className="px-6 py-2 bg-white text-indigo-900 rounded-lg font-bold text-sm hover:bg-indigo-50 transition-colors">
+              <button className="px-6 py-2 bg-white text-emerald-900 rounded-lg font-bold text-sm hover:bg-emerald-50 transition-colors">
                 View Templates
               </button>
             </div>

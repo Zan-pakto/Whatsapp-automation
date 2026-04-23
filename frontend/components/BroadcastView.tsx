@@ -58,7 +58,7 @@ export default function BroadcastView() {
         </div>
 
         {/* Stepper */}
-        <div className="bg-white p-6 rounded-[2rem] border border-gray-100 shadow-sm flex justify-between items-center px-12">
+        <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm flex justify-between items-center px-12">
           {[
             { s: 1, t: 'Audience' },
             { s: 2, t: 'Content' },
@@ -75,7 +75,7 @@ export default function BroadcastView() {
         </div>
 
         {step === 1 && (
-          <div className="bg-white rounded-[2.5rem] border border-gray-100 shadow-sm overflow-hidden animate-in slide-in-from-bottom-4 duration-500">
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden animate-in slide-in-from-bottom-4 duration-500">
             <div className="p-8 border-b bg-gray-50/50 flex justify-between items-center">
               <div>
                 <span className="text-2xl font-black text-gray-900">{selectedIds.length}</span>
@@ -93,7 +93,7 @@ export default function BroadcastView() {
                 <div 
                   key={contact._id} 
                   onClick={() => handleToggleSelect(contact._id)}
-                  className={`p-5 rounded-3xl border-2 transition-all cursor-pointer flex items-center gap-4 ${selectedIds.includes(contact._id) ? 'border-emerald-500 bg-emerald-50 shadow-md' : 'border-gray-50 hover:border-gray-200'}`}
+                  className={`p-5 rounded-xl border-2 transition-all cursor-pointer flex items-center gap-4 ${selectedIds.includes(contact._id) ? 'border-emerald-500 bg-emerald-50 shadow-md' : 'border-gray-50 hover:border-gray-200'}`}
                 >
                   <div className={`w-6 h-6 rounded-lg border-2 flex items-center justify-center transition-colors ${selectedIds.includes(contact._id) ? 'bg-emerald-500 border-emerald-500' : 'border-gray-200'}`}>
                     {selectedIds.includes(contact._id) && <CheckCircle size={16} className="text-white" />}
@@ -109,7 +109,7 @@ export default function BroadcastView() {
               <button 
                 disabled={selectedIds.length === 0}
                 onClick={() => setStep(2)}
-                className="px-12 py-4 bg-[#075E54] text-white rounded-2xl font-bold shadow-xl shadow-emerald-100 hover:scale-105 active:scale-95 transition-all disabled:opacity-50"
+                className="px-12 py-4 bg-[#075E54] text-white rounded-xl font-bold shadow-xl shadow-emerald-100 hover:scale-105 active:scale-95 transition-all disabled:opacity-50"
               >
                 Proceed to Content
               </button>
@@ -118,17 +118,17 @@ export default function BroadcastView() {
         )}
 
         {step === 2 && (
-          <div className="bg-white rounded-[2.5rem] border border-gray-100 shadow-sm p-10 space-y-8 animate-in slide-in-from-bottom-4 duration-500">
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-10 space-y-8 animate-in slide-in-from-bottom-4 duration-500">
             <div className="space-y-4">
               <label className="text-xs font-bold text-gray-400 uppercase tracking-widest ml-1">Message Body</label>
               <textarea 
                 rows={8}
                 placeholder="Type your broadcast message here..."
-                className="w-full p-8 bg-gray-50 border-none rounded-[2.5rem] focus:ring-4 focus:ring-emerald-500/10 outline-none text-gray-900 resize-none text-lg shadow-inner"
+                className="w-full p-8 bg-gray-50 border-none rounded-xl focus:ring-4 focus:ring-emerald-500/10 outline-none text-gray-900 resize-none text-lg shadow-inner"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />
-              <div className="p-5 bg-emerald-50 text-emerald-800 rounded-3xl flex items-start gap-4 text-sm leading-relaxed border border-emerald-100">
+              <div className="p-5 bg-emerald-50 text-emerald-800 rounded-xl flex items-start gap-4 text-sm leading-relaxed border border-emerald-100">
                 <Info size={20} className="shrink-0 mt-0.5 text-emerald-600" />
                 <span><strong>Pro Tip:</strong> Using the customer's name in the message significantly increases open rates. Ensure your Meta account has active balance for bulk sending.</span>
               </div>
@@ -138,7 +138,7 @@ export default function BroadcastView() {
               <button 
                 disabled={!message}
                 onClick={() => setStep(3)}
-                className="px-12 py-4 bg-[#075E54] text-white rounded-2xl font-bold shadow-xl shadow-emerald-100 hover:scale-105 active:scale-95 transition-all"
+                className="px-12 py-4 bg-[#075E54] text-white rounded-xl font-bold shadow-xl shadow-emerald-100 hover:scale-105 active:scale-95 transition-all"
               >
                 Review Campaign
               </button>
@@ -147,7 +147,7 @@ export default function BroadcastView() {
         )}
 
         {step === 3 && (
-          <div className="bg-white rounded-[3rem] border border-gray-100 shadow-sm p-16 text-center space-y-10 animate-in zoom-in duration-500">
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-16 text-center space-y-10 animate-in zoom-in duration-500">
             <div className="w-32 h-32 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto shadow-inner ring-8 ring-emerald-50">
               <Zap size={56} className="animate-pulse" />
             </div>
@@ -155,7 +155,7 @@ export default function BroadcastView() {
               <h3 className="text-3xl font-black text-gray-900">Ready to Launch?</h3>
               <p className="text-gray-500 text-lg">Your broadcast will be sent to <span className="font-bold text-[#075E54]">{selectedIds.length} customers</span> immediately.</p>
             </div>
-            <div className="bg-gray-50 p-8 rounded-[2rem] max-w-xl mx-auto text-gray-600 italic border border-gray-100 text-sm leading-loose">
+            <div className="bg-gray-50 p-8 rounded-xl max-w-xl mx-auto text-gray-600 italic border border-gray-100 text-sm leading-loose">
               "{message}"
             </div>
             <div className="flex gap-6 max-w-lg mx-auto pt-4">
@@ -163,7 +163,7 @@ export default function BroadcastView() {
               <button 
                 disabled={loading}
                 onClick={handleSend}
-                className="flex-1 py-5 bg-[#075E54] text-white rounded-[1.5rem] font-bold shadow-2xl shadow-emerald-200 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3 text-lg"
+                className="flex-1 py-5 bg-[#075E54] text-white rounded-xl font-bold shadow-2xl shadow-emerald-200 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3 text-lg"
               >
                 {loading ? 'Processing...' : <><Send size={22} /> Blast Now</>}
               </button>

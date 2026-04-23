@@ -34,7 +34,7 @@ export default function ChatSidebar() {
             <div
               key={conv.contact._id}
               onClick={() => setActiveContact(conv.contact)}
-              className={`p-4 mx-2 my-1 rounded-2xl cursor-pointer transition-all duration-200 ${
+              className={`p-4 mx-2 my-1 rounded-xl cursor-pointer transition-all duration-200 ${
                 activeContact?._id === conv.contact._id 
                   ? 'bg-emerald-50 text-emerald-900 shadow-sm border border-emerald-100' 
                   : 'hover:bg-gray-50 border border-transparent'

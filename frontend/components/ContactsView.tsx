@@ -98,13 +98,13 @@ export default function ContactsView() {
           <input 
             type="text" 
             placeholder="Search by name or phone number..."
-            className="w-full pl-12 pr-4 py-3 bg-white border border-gray-200 rounded-2xl focus:ring-2 focus:ring-emerald-500 outline-none shadow-sm text-gray-900"
+            className="w-full pl-12 pr-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none shadow-sm text-gray-900"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
         </div>
 
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+        <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
           <table className="w-full text-left">
             <thead className="bg-gray-50 text-gray-500 text-[10px] uppercase tracking-widest font-bold border-b border-gray-100">
               <tr>
@@ -149,7 +149,7 @@ export default function ContactsView() {
       {/* Add Modal */}
       {showAddModal && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] flex items-center justify-center p-4">
-          <div className="bg-white w-full max-w-md rounded-[2.5rem] shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-300">
+          <div className="bg-white w-full max-w-md rounded-xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-300">
             <div className="bg-[#075E54] p-8 text-white flex justify-between items-center">
               <div>
                 <h3 className="text-2xl font-bold">New Customer</h3>
@@ -181,7 +181,7 @@ export default function ContactsView() {
       {/* Bulk Import Modal */}
       {showBulkModal && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] flex items-center justify-center p-4">
-          <div className="bg-white w-full max-w-2xl rounded-[2.5rem] shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-300">
+          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-300">
             <div className="bg-[#075E54] p-8 text-white flex justify-between items-center">
               <div>
                 <h3 className="text-2xl font-bold">Bulk Import Contacts</h3>
@@ -198,7 +198,7 @@ export default function ContactsView() {
                 <textarea 
                   rows={10} 
                   placeholder={"John Doe, 919876543210\nJane Smith, 919988776655"}
-                  className="w-full px-6 py-6 bg-gray-50 border border-gray-100 rounded-[2rem] focus:ring-4 focus:ring-emerald-500/10 outline-none text-gray-900 font-mono text-sm shadow-inner" 
+                  className="w-full px-6 py-6 bg-gray-50 border border-gray-100 rounded-xl focus:ring-4 focus:ring-emerald-500/10 outline-none text-gray-900 font-mono text-sm shadow-inner" 
                   value={bulkData} 
                   onChange={e => setBulkData(e.target.value)} 
                 />
@@ -208,7 +208,7 @@ export default function ContactsView() {
                 <button type="button" onClick={() => setShowBulkModal(false)} className="flex-1 py-4 text-gray-400 font-bold hover:text-gray-600 transition-colors">Cancel</button>
                 <button 
                   onClick={handleBulkImport}
-                  className="flex-1 py-4 bg-[#075E54] text-white rounded-2xl font-bold shadow-xl shadow-emerald-100 hover:scale-105 transition-all"
+                  className="flex-1 py-4 bg-[#075E54] text-white rounded-xl font-bold shadow-xl shadow-emerald-100 hover:scale-105 transition-all"
                 >
                   Start Import Process
                 </button>

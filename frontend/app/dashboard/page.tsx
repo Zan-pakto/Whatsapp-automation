@@ -53,7 +53,7 @@ export default function DashboardPage() {
             <button 
               key={item.id}
               onClick={() => setActiveTab(item.id as any)}
-              className={`w-full flex items-center gap-4 px-5 py-4 rounded-2xl transition-all duration-300 font-bold text-sm ${
+              className={`w-full flex items-center gap-4 px-5 py-4 rounded-xl transition-all duration-300 font-bold text-sm ${
                 activeTab === item.id 
                 ? 'bg-white text-[#054c44] shadow-xl translate-x-2' 
                 : 'text-emerald-100/70 hover:text-white hover:bg-white/5'
@@ -72,7 +72,7 @@ export default function DashboardPage() {
         <div className="p-6 mt-auto border-t border-white/5 space-y-4">
           <button 
             onClick={() => setActiveTab('settings')}
-            className={`w-full flex items-center gap-4 px-5 py-4 rounded-2xl transition-all duration-300 font-bold text-sm ${
+            className={`w-full flex items-center gap-4 px-5 py-4 rounded-xl transition-all duration-300 font-bold text-sm ${
               activeTab === 'settings' 
               ? 'bg-white text-[#054c44] shadow-xl' 
               : 'text-emerald-100/70 hover:text-white hover:bg-white/5'
@@ -82,7 +82,7 @@ export default function DashboardPage() {
             Settings
           </button>
 
-          <div className="flex items-center gap-3 px-4 py-4 bg-white/5 rounded-2xl border border-white/5">
+          <div className="flex items-center gap-3 px-4 py-4 bg-white/5 rounded-xl border border-white/5">
             <div className="w-10 h-10 rounded-xl bg-emerald-600 flex items-center justify-center text-xs font-bold text-white shadow-inner">
               {user?.name?.substring(0, 2).toUpperCase() || 'AD'}
             </div>
